@@ -186,11 +186,11 @@
 // | CTRL  |  Z      |  X    |   C   |  D     |  V      |  ALT     | MUTE    | --- | FLOAT |  ALT    |  K        |  H        |  ,       |  .     | /      |  -     |
 // | SHIFT | ---     | ---   |      NAV       | UML     | SPACE    |SUPER/CMD| --- | ENTER | SHIFT   | SPEC      |  NUM                 |  ---   | ---    | MAC    |
             bindings = <
-   &kp N0    &kp N1   &kp N2   &kp N3 &kp N4   &kp N5                                                  &kp N6      &kp N7      &kp N8    &kp N9   &kp N0   &kp N7
-   &kp ESC   &kp Q    &kp W    &kp F  &kp P    &kp B      &kp N6                             &kp N4    &kp J       &kp L       &kp U     &kp Y    &kp SEMI &kp BSPC
-   &kp TAB   &kp A    &kp R    &kp S  &kp T    &kp G      &kp N7                             &kp N3    &kp M       &kp N       &kp E     &kp I    &kp O    &kp SQT
-   &kp LCTRL &kp Z    &kp X    &kp C  &kp D    &kp V      &kp N8    &kp N9      &kp N1       &kp N2    &kp K       &kp H       &kp COMMA &kp DOT  &kp FSLH &kp MINUS
-   &kp LSHFT &kp N2   &kp N3   &mo NAVIGATION  &mo UMLAUT &kp SPACE &kp N0      &kp ENTER    &kp LSHFT &mo SYMBOL  &mo NUMBER            &kp N6   &kp N5   &to MACDEF
+   &none     &kp N1   &kp N2   &kp N3 &kp N4   &kp N5                                                  &kp N6      &kp N7      &kp N8    &kp N9   &kp N0   &none
+   &kp ESC   &kp Q    &kp W    &kp F  &kp P    &kp B      &none                              &none     &kp J       &kp L       &kp U     &kp Y    &kp SEMI &kp BSPC
+   &kp TAB   &kp A    &kp R    &kp S  &kp T    &kp G      &none                              &none     &kp M       &kp N       &kp E     &kp I    &kp O    &kp SQT
+   &kp LCTRL &kp Z    &kp X    &kp C  &kp D    &kp V      &kp LALT  &kp WM_MUTE &WM_FLOAT    &kp RALT  &kp K       &kp H       &kp COMMA &kp DOT  &kp FSLH &kp MINUS
+   &kp LSHFT &none    &none    &mo NAVIGATION  &mo UMLAUT &kp SPACE &kp LGUI    &kp ENTER    &kp LSHFT &mo SYMBOL  &mo NUMBER            &none    &none    &to MACDEF
             >;
 
         };
