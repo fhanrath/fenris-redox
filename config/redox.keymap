@@ -374,8 +374,8 @@
 // | SHIFT | --- | --- |  ---  | --- | --- | SPACE |SUPER/CMD| --- | ENTER | SHIFT |  ---  |  ---  |  ---  |  --- | ---|    ---    |
             bindings = <
    &trans    &none       &none     &none     &none          &none                                                   &none       &none       &none       &none        &none    &trans
-   &trans    &MAC_KILL   &kp MAC_7 &kp MAC_8 &kp MAC_9      &kp MAC_0  &none                              &trans    &none       &none       &nnoe       &none        &none    &trans
-   &trans    &kp MAC_LAU &kp MAC_4 &kp MAC_5 &kp MAC_6      &none      &none                              &trans    &none       &nnoe       &none       &none        &none    &none
+   &trans    &MAC_KILL   &kp MAC_7 &kp MAC_8 &kp MAC_9      &kp MAC_0  &none                              &trans    &none       &none       &none       &none        &none    &trans
+   &trans    &kp MAC_LAU &kp MAC_4 &kp MAC_5 &kp MAC_6      &none      &none                              &trans    &none       &none       &none       &none        &none    &none
    &trans    &MAC_FSCR   &kp MAC_1 &kp MAC_2 &kp MAC_3      &none      &trans    &trans      &trans       &trans    &none       &none       &none       &none        &none    &none
    &trans    &trans      &trans    &trans    &none          &none      &trans    &trans      &trans       &trans    &none       &none       &trans      &trans       &trans   &trans
             >;
