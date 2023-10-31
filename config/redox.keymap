@@ -179,18 +179,18 @@
         compatible =  "zmk,keymap" ;
 
         default_layer {
-// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// | ---   |  1      |  2    |   3   |  4           |  5      |                      ---                   |  6        |  7        |  8       |  9     | 0      | ---    |
-// | ESC   |  Q      |  W    |   F   |  P           |  B      |   6      |           ---         |  ---    |  J        |  L        |  U       |  Y     | ;      | BKSP   |
-// | TAB   |  A      |  R    |   S   |  T           |  G      |   7      |           ---         |  ---    |  M        |  N        |  E       |  I     | O      |  '     |
-// | CTRL  |  Z      |  X    |   C   |  D           |  V      |  ALT     | MUTE    | --- | FLOAT |  ALT    |  K        |  H        |  ,       |  .     | /      |  -     |
-// | SHIFT | ---     | ---   |  ---  | NAV          | UML     | SPACE    |SUPER/CMD| --- | ENTER | SHIFT   | SPEC      |  NUM      | ---      |  ---   | ---    | MAC    |
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+// | ---   |  1      |  2    |   3   |  4     |  5      |                      ---                   |  6        |  7        |  8       |  9     | 0      | ---    |
+// | ESC   |  Q      |  W    |   F   |  P     |  B      |   6      |           ---         |  ---    |  J        |  L        |  U       |  Y     | ;      | BKSP   |
+// | TAB   |  A      |  R    |   S   |  T     |  G      |   7      |           ---         |  ---    |  M        |  N        |  E       |  I     | O      |  '     |
+// | CTRL  |  Z      |  X    |   C   |  D     |  V      |  ALT     | MUTE    | --- | FLOAT |  ALT    |  K        |  H        |  ,       |  .     | /      |  -     |
+// | SHIFT | ---     | ---   |      NAV       | UML     | SPACE    |SUPER/CMD| --- | ENTER | SHIFT   | SPEC      |  NUM                 |  ---   | ---    | MAC    |
             bindings = <
-   &none     &kp N1   &kp N2   &kp N3 &kp N4         &kp N5                                                  &kp N6      &kp N7      &kp N8    &kp N9   &kp N0   &none
-   &kp ESC   &kp Q    &kp W    &kp F  &kp P          &kp B      &kp N6                             &none     &kp J       &kp L       &kp U     &kp Y    &kp SEMI &kp BSPC
-   &kp TAB   &kp A    &kp R    &kp S  &kp T          &kp G      &kp N7                             &none     &kp M       &kp N       &kp E     &kp I    &kp O    &kp SQT
-   &kp LCTRL &kp Z    &kp X    &kp C  &kp D          &kp V      &kp LALT  &kp WM_MUTE &WM_FLOAT    &kp RALT  &kp K       &kp H       &kp COMMA &kp DOT  &kp FSLH &kp MINUS
-   &kp LSHFT &none    &none    &none  &mo NAVIGATION &mo UMLAUT &kp SPACE &kp GUI     &kp ENTER    &kp LSHFT &mo SYMBOL  &mo NUMBER  &none     &none    &none    &to MACDEF
+   &none     &kp N1   &kp N2   &kp N3 &kp N4   &kp N5                                                  &kp N6      &kp N7      &kp N8    &kp N9   &kp N0   &none
+   &kp ESC   &kp Q    &kp W    &kp F  &kp P    &kp B      &kp N6                             &none     &kp J       &kp L       &kp U     &kp Y    &kp SEMI &kp BSPC
+   &kp TAB   &kp A    &kp R    &kp S  &kp T    &kp G      &kp N7                             &none     &kp M       &kp N       &kp E     &kp I    &kp O    &kp SQT
+   &kp LCTRL &kp Z    &kp X    &kp C  &kp D    &kp V      &kp LALT  &kp WM_MUTE &WM_FLOAT    &kp RALT  &kp K       &kp H       &kp COMMA &kp DOT  &kp FSLH &kp MINUS
+   &kp LSHFT &none    &none    &mo NAVIGATION  &mo UMLAUT &kp SPACE &kp GUI     &kp ENTER    &kp LSHFT &mo SYMBOL  &mo NUMBER            &none    &none    &to MACDEF
             >;
 
         };
@@ -201,13 +201,13 @@
 // | ESC   | --- | --- |  ---  | --- | --- |  ---  |           ---         |  ---  |  PGU  | HOME  |  UP   |  END | DEL|    BKSP   |
 // | TAB   | --- | --- |  ---  | --- | --- |  ---  |           ---         |  ---  |  PGD  | LEFT  | DOWN  |RIGHT | INS|    ---    |
 // | CTRL  | --- | --- |  ---  | --- | --- |  ALT  | MUTE    | --- | FLOAT |  ALT  |  ---  |  ---  | ---   |  --- | ---|    ---    |
-// | SHIFT | --- | --- |  ---  | --- | --- | SPACE |SUPER/CMD| --- | ENTER | SHIFT |  WM   |  WM   | ---   |  --- | ---|    ---    |
+// | SHIFT | --- | --- |  ---        | --- | SPACE |SUPER/CMD| --- | ENTER | SHIFT |  WM   |  WM           |  --- | ---|    ---    |
             bindings = <
    &trans    &none    &none    &none  &none          &none                                                   &none       &none       &none     &none     &none    &trans
    &trans    &none    &none    &none  &none          &none      &none                              &trans    &kp PG_UP   &kp HOME    &kp UP    &kp END   &kp DEL  &trans
    &trans    &none    &none    &none  &none          &none      &none                              &trans    &kp PG_DN   &kp LEFT    &kp DOWN  &kp RIGHT &kp INS  &none
    &trans    &none    &none    &none  &none          &none      &trans    &trans      &trans       &trans    &none       &none       &none     &none     &none    &none
-   &trans    &trans   &trans   &trans &none          &none      &trans    &trans      &trans       &trans    &mo WINDOWM &mo WINDOWM &trans    &trans    &trans   &trans
+   &trans    &trans   &trans          &none          &none      &trans    &trans      &trans       &trans    &mo WINDOWM &mo WINDOWM           &trans    &trans   &trans
             >;
 
         };
@@ -224,7 +224,7 @@
    &trans    &none    &kp F7   &kp F8 &kp F9         &kp F10     &none                              &trans    &none       &kp N7      &kp N8    &kp N9   &trans    &trans
    &trans    &none    &kp F4   &kp F5 &kp F6         &kp F11     &none                              &trans    &none       &kp N4      &kp N5    &kp N6   &kp COMMA &kp DOT
    &trans    &none    &kp F1   &kp F2 &kp F3         &kp F12     &trans    &trans      &trans       &trans    &none       &kp N1      &kp N2    &kp N3   &kp EQUAL &trans
-   &trans    &trans   &trans   &trans &mo WINDOWM    &mo WINDOWM &trans    &trans      &trans       &trans    &kp N0      &none       &trans    &trans   &trans    &trans
+   &trans    &trans   &trans          &mo WINDOWM    &mo WINDOWM &trans    &trans      &trans       &trans    &kp N0      &none                 &trans   &trans    &trans
             >;
 
         };
@@ -241,7 +241,7 @@
    &trans    &kp EXCL  &kp AT    &kp LBRC &kp RBRC     &kp STAR    &none                              &trans    &none       &none       &none     &none    &none    &trans
    &trans    &kp HASH  &kp DLLR  &kp LPAR &kp RPAR     &kp GRAVE   &none                              &trans    &none       &kp EQUAL   &kp SPC_E &none    &none    &none
    &trans    &kp PRCNT &kp CARET &kp LBKT &kp RBKT     &kp TILDE   &trans    &trans      &trans       &trans    &none       &kp BSLH    &kp AMPS  &none    &none    &none
-   &trans    &trans    &trans    &trans   &mo WINDOWM  &mo WINDOWM &trans    &trans      &trans       &trans    &none       &none       &trans    &trans   &trans   &trans
+   &trans    &trans    &trans             &mo WINDOWM  &mo WINDOWM &trans    &trans      &trans       &trans    &none       &none                 &trans   &trans   &trans
             >;
 
         };
@@ -258,7 +258,7 @@
    &trans    &trans    &trans   &trans    &trans          &trans      &trans                             &trans    &trans       &trans       &kp UML_U  &trans    &trans    &trans
    &trans    &kp UML_A &trans   &kp UML_S &trans          &trans      &trans                             &trans    &trans       &trans       &trans     &trans    &kp UML_O &trans
    &trans    &trans    &trans   &trans    &trans          &trans      &trans    &trans      &trans       &trans    &trans       &trans       &trans     &trans    &trans    &trans
-   &trans    &trans    &trans   &trans    &none           &none       &trans    &trans      &trans       &trans    &mo WINDOWM &mo WINDOWM   &trans     &trans    &trans    &trans
+   &trans    &trans    &trans             &none           &none       &trans    &trans      &trans       &trans    &mo WINDOWM &mo WINDOWM              &trans    &trans    &trans
             >;
 
         };
@@ -275,7 +275,7 @@
    &trans    &WM_KILL    &kp WM_7 &kp WM_8 &kp WM_9       &kp WM_0   &none                              &trans    &none       &none       &kp WM_UP   &none        &none    &trans
    &trans    &kp WM_LAUN &kp WM_4 &kp WM_5 &kp WM_6       &none      &none                              &trans    &none       &kp WM_LEFT &kp WM_DOWN &kp WM_RIGHT &none    &none
    &trans    &kp WM_FSCR &kp WM_1 &kp WM_2 &kp WM_3       &none      &trans    &trans      &trans       &trans    &none       &none       &none       &none        &none    &none
-   &trans    &trans      &trans   &trans   &none          &none      &trans    &trans      &trans       &trans    &none       &none       &trans      &trans       &trans   &trans
+   &trans    &trans      &trans            &none          &none      &trans    &trans      &trans       &trans    &none       &none                   &trans       &trans   &trans
             >;
 
         };
@@ -292,7 +292,7 @@
    &kp ESC   &kp Q    &kp W    &kp F  &kp P          &kp B      &kp N6                              &none     &kp J       &kp L       &kp U     &kp Y    &kp SEMI    &kp BSPC
    &kp TAB   &kp A    &kp R    &kp S  &kp T          &kp G      &kp N7                              &none     &kp M       &kp N       &kp E     &kp I    &kp O       &kp SQT
    &kp LCTRL &kp Z    &kp X    &kp C  &kp D          &kp V      &kp LALT  &MAC_MUTE    &none        &kp RALT  &kp K       &kp H       &kp COMMA &kp DOT  &kp FSLH    &kp MINUS
-   &kp LSHFT &none    &none    &none  &mo MACNAV     &mo MACUML &kp SPACE &kp GUI      &kp ENTER    &kp LSHFT &mo MACSYM  &mo MACNUM  &none     &none    &to DEFAULT &none
+   &kp LSHFT &none    &none           &mo MACNAV     &mo MACUML &kp SPACE &kp GUI      &kp ENTER    &kp LSHFT &mo MACSYM  &mo MACNUM            &none    &to DEFAULT &none
             >;
 
         };
@@ -309,7 +309,7 @@
    &trans    &none    &none    &none  &none          &none      &none                              &trans    &kp PG_UP   &kp HOME    &kp UP    &kp END   &kp DEL  &trans
    &trans    &none    &none    &none  &none          &none      &none                              &trans    &kp PG_DN   &kp LEFT    &kp DOWN  &kp RIGHT &kp INS  &none
    &trans    &none    &none    &none  &none          &none      &trans    &trans      &trans       &trans    &none       &none       &none     &none     &none    &none
-   &trans    &trans   &trans   &trans &none          &none      &trans    &trans      &trans       &trans    &mo MACWM   &mo MACWM   &trans    &trans    &trans   &trans
+   &trans    &trans   &trans          &none          &none      &trans    &trans      &trans       &trans    &mo MACWM   &mo MACWM             &trans    &trans   &trans
             >;
 
         };
@@ -326,7 +326,7 @@
    &trans    &none    &kp F7   &kp F8 &kp F9         &kp F10     &none                              &trans    &none       &kp N7      &kp N8    &kp N9   &trans    &trans
    &trans    &none    &kp F4   &kp F5 &kp F6         &kp F11     &none                              &trans    &none       &kp N4      &kp N5    &kp N6   &kp COMMA &kp DOT
    &trans    &none    &kp F1   &kp F2 &kp F3         &kp F12     &trans    &trans      &trans       &trans    &none       &kp N1      &kp N2    &kp N3   &kp EQUAL &trans
-   &trans    &trans   &trans   &trans &mo MACWM      &mo MACWM   &trans    &trans      &trans       &trans    &kp N0      &none       &trans    &trans   &trans    &trans
+   &trans    &trans   &trans          &mo MACWM      &mo MACWM   &trans    &trans      &trans       &trans    &kp N0      &none                 &trans   &trans    &trans
             >;
 
         };
@@ -343,7 +343,7 @@
    &trans    &kp EXCL  &kp AT    &kp LBRC &kp RBRC     &kp STAR    &none                              &trans    &none       &none       &none     &none    &none    &trans
    &trans    &kp HASH  &kp DLLR  &kp LPAR &kp RPAR     &kp GRAVE   &none                              &trans    &none       &kp EQUAL   &MAC_EUR  &none    &none    &none
    &trans    &kp PRCNT &kp CARET &kp LBKT &kp RBKT     &kp TILDE   &trans    &trans      &trans       &trans    &none       &kp BSLH    &kp AMPS  &none    &none    &none
-   &trans    &trans    &trans    &trans   &mo MACWM    &mo MACWM   &trans    &trans      &trans       &trans    &none       &none       &trans    &trans   &trans   &trans
+   &trans    &trans    &trans             &mo MACWM    &mo MACWM   &trans    &trans      &trans       &trans    &none       &none                 &trans   &trans   &trans
             >;
 
         };
@@ -360,7 +360,7 @@
    &trans    &trans     &trans   &trans    &trans          &trans      &trans                             &trans    &trans       &trans       &MAC_UML_U &trans    &trans     &trans
    &trans    &MAC_UML_A &trans   &kp UML_S &trans          &trans      &trans                             &trans    &trans       &trans       &trans     &trans    &MAC_UML_O &trans
    &trans    &trans     &trans   &trans    &trans          &trans      &trans    &trans      &trans       &trans    &trans       &trans       &trans     &trans    &trans     &trans
-   &trans    &trans     &trans   &trans    &none           &none       &trans    &trans      &trans       &trans    &mo MACWM   &mo MACWM     &trans     &trans    &trans     &trans
+   &trans    &trans     &trans             &none           &none       &trans    &trans      &trans       &trans    &mo MACWM   &mo MACWM                &trans    &trans     &trans
             >;
 
         };
@@ -377,7 +377,7 @@
    &trans    &MAC_KILL   &kp MAC_7 &kp MAC_8 &kp MAC_9      &kp MAC_0  &none                              &trans    &none       &none       &none       &none        &none    &trans
    &trans    &kp MAC_LAU &kp MAC_4 &kp MAC_5 &kp MAC_6      &none      &none                              &trans    &none       &none       &none       &none        &none    &none
    &trans    &MAC_FSCR   &kp MAC_1 &kp MAC_2 &kp MAC_3      &none      &trans    &trans      &trans       &trans    &none       &none       &none       &none        &none    &none
-   &trans    &trans      &trans    &trans    &none          &none      &trans    &trans      &trans       &trans    &none       &none       &trans      &trans       &trans   &trans
+   &trans    &trans      &trans              &none          &none      &trans    &trans      &trans       &trans    &none       &none                   &trans       &trans   &trans
             >;
 
         };
