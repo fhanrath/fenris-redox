@@ -57,7 +57,7 @@
 #define SYMBOL     3
 #define UMLAUT     4
 #define WINDOWM    5
-#define MACD       6
+#define MACDEF     6
 #define MACNAV     7
 #define MACNUM     8
 #define MACSYM     9
@@ -136,8 +136,8 @@
                 = <&macro_press   &kp LALT>
                 , <&macro_press   &kp LSHFT>
                 , <&macro_tap     &kp N2>
-                , <&macro_release &kp LALT>
                 , <&macro_release &kp LSHFT>
+                , <&macro_release &kp LALT>
                 ;
         };
         MAC_UML_A: MAC_UML_A {
@@ -189,8 +189,8 @@
    &none     &kp N1   &kp N2   &kp N3 &kp N4         &kp N5                                                  &kp N6      &kp N7      &kp N8    &kp N9   &kp N0   &none
    &kp ESC   &kp Q    &kp W    &kp F  &kp P          &kp B      &kp N6                             &none     &kp J       &kp L       &kp U     &kp Y    &kp SEMI &kp BSPC
    &kp TAB   &kp A    &kp R    &kp S  &kp T          &kp G      &kp N7                             &none     &kp M       &kp N       &kp E     &kp I    &kp O    &kp SQT
-   &kp LCTRL &kp Z    &kp X    &kp C  &kp D          &kp V      &kp LALT  &kp WM_MUTE &WM_FLOAT    &kp RALT  &kp K       &kp H       &kp COMMA &kp DOT  &kp FSLH &mt MINUS
-   &kp LSHFT &none    &none    &none  &mo NAVIGATION &mo UMLAUT &kp SPACE &kp GUI     &kp ENTER    &kp LSHFT &mo SYMBOL  &mo NUMBER  &none     &none    &none    &to MACD
+   &kp LCTRL &kp Z    &kp X    &kp C  &kp D          &kp V      &kp LALT  &kp WM_MUTE &WM_FLOAT    &kp RALT  &kp K       &kp H       &kp COMMA &kp DOT  &kp FSLH &kp MINUS
+   &kp LSHFT &none    &none    &none  &mo NAVIGATION &mo UMLAUT &kp SPACE &kp GUI     &kp ENTER    &kp LSHFT &mo SYMBOL  &mo NUMBER  &none     &none    &none    &to MACDEF
             >;
 
         };
@@ -291,7 +291,7 @@
    &none     &kp N1   &kp N2   &kp N3 &kp N4         &kp N5                                                   &kp N6      &kp N7      &kp N8    &kp N9   &kp N0      &none
    &kp ESC   &kp Q    &kp W    &kp F  &kp P          &kp B      &kp N6                              &none     &kp J       &kp L       &kp U     &kp Y    &kp SEMI    &kp BSPC
    &kp TAB   &kp A    &kp R    &kp S  &kp T          &kp G      &kp N7                              &none     &kp M       &kp N       &kp E     &kp I    &kp O       &kp SQT
-   &kp LCTRL &kp Z    &kp X    &kp C  &kp D          &kp V      &kp LALT  &MAC_MUTE    &none        &kp RALT  &kp K       &kp H       &kp COMMA &kp DOT  &kp FSLH    &mt MINUS
+   &kp LCTRL &kp Z    &kp X    &kp C  &kp D          &kp V      &kp LALT  &MAC_MUTE    &none        &kp RALT  &kp K       &kp H       &kp COMMA &kp DOT  &kp FSLH    &kp MINUS
    &kp LSHFT &none    &none    &none  &mo MACNAV     &mo MACUML &kp SPACE &kp GUI      &kp ENTER    &kp LSHFT &mo MACSYM  &mo MACNUM  &none     &none    &to DEFAULT &none
             >;
 
